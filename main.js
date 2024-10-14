@@ -29,7 +29,7 @@ if (!isNaN(parseFloat(distance))) {
 let price;
 if (!isNaN(parseFloat(distance)) || !isNaN(parseInt(age))) {
     // Calcolo prezzo biglietto
-    price = parseInt(distance) * 0.21;
+    price = parseFloat(distance) * 0.21;
 
     // Applico sconti
     // Controllo se minorenne
