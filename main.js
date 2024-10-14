@@ -12,11 +12,31 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 //-----------------------------
 // Prelievo dati
 //-----------------------------
+//Input distanza
+let distance = prompt("Inserire la distanza (km):");
+
+//Input eta' passegero
+let age = prompt("Inserire l'età del passeggero:");
 
 //-----------------------------
 //Elaborazione dati
 //-----------------------------
+// Calcolo prezzo biglietto
+price = parseInt(distance) * 0.21;
+
+// Applico sconti
+// Controllo se minorenne
+if (parseInt(age) < 18) {
+    // Applico sconto 20%
+    price = (price * 20) / 100;
+}
+// Controllo se > 65 anni
+else if (parseInt(age) >= 65) {
+    // Applico sconto 40%
+    price = (price * 40) / 100;
+}
 
 //-----------------------------
 //Output
 //-----------------------------
+alert("Il prezzo del biglietto è: " + price.toFixed(2) + "€");
